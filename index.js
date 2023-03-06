@@ -38,6 +38,9 @@ app.use('/api/mail', mailRoute)
 app.use('/api/user', userRoute)
 app.use("/api/category", categoryRoute);
 app.use('/api/productDetails', singleProductRoute);
+app.get('/', (req, res) => {
+	res.send("Server is working.")
+})
 
 app.listen(portNumber, (error) => {
 	if (error) {
