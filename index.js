@@ -25,6 +25,7 @@ mongoose
     console.error(error);
     console.error("Error while connecting to mongo DB.");
   });
+app.use(express.urlencoded({ extended: false }));
 // communicate with external servers
 app.use(cors())
 app.use(express.json())
