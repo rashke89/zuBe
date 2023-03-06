@@ -42,11 +42,13 @@ app.get('/', (req, res) => {
 	res.send("Server is working.")
 })
 
-app.listen(portNumber, (error) => {
+const port = process.env.PORT || portNumber
+
+app.listen(port, (error) => {
 	if (error) {
 		console.log('---ERROR ON SERVER START---');
 		console.log(error);
 	} else {
-		console.log(`Server is running on port: ${portNumber}`);
+		console.log(`Server is running on port: ${port}`);
 	}
 });
